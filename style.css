@@ -3,29 +3,29 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   font-family: "Century Ghotic", Arial, Helvetica, sans-serif;
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  perspective: 1000px;
 }
 
 .container {
-  background: lightblue;
   width: 50%;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 
 .card {
+  transform-style: preserve-3d;
   min-height: 80vh;
   width: 35rem;
-  padding: 0rem 5rem;
-  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0 0 50px rgba(0, 0, 0, 0.2);
-  /* background: lightcoral; */
+  border-radius: 30px;
+  padding: 4rem 5rem;
+  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
 }
 
 .sneaker {
@@ -38,6 +38,7 @@ body {
 .sneaker img {
   width: 20rem;
   z-index: 2;
+  transition: all 0.75s ease-out;
 }
 
 .circle {
@@ -52,11 +53,10 @@ body {
   border-radius: 50%;
   z-index: 1;
 }
-
 .info .title {
   font-size: 3rem;
+  transition: all 0.75s ease-out;
 }
-
 .info h3 {
   font-size: 1.3rem;
   padding: 2rem 0rem;
@@ -66,6 +66,7 @@ body {
 .sizes {
   display: flex;
   justify-content: space-around;
+  transition: all 0.75s ease-out;
 }
 .sizes button {
   padding: 0.5rem 2rem;
@@ -76,10 +77,25 @@ body {
   border-radius: 30px;
   cursor: pointer;
   font-weight: bold;
-  color: #585858
+  color: #585858;
 }
 
-button.active{
-    background: #558855;
-    color: white;
+button.active {
+  background: #558855;
+  color: white;
+}
+
+.purchase {
+  margin-top: 5rem;
+  transition: all 0.75s ease-out;
+}
+.purchase button {
+  width: 100%;
+  padding: 1rem 0rem;
+  background: #f54642;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 30px;
+  font-weight: bolder;
 }
